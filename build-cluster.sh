@@ -24,8 +24,8 @@ EOF`
     VAGRANT_DEFS+=`cat <<EOF
     config.vm.define "c$i", autostart: false do |c$i|
       c$i.vm.provider "virtualbox" do |vboxc$i|
-        vboxc$i.memory = 2048
-        vboxc$i.cpus = 1
+        vboxc$i.memory = 1024
+        vboxc$i.cpus = 2
         # Enable if you need to debug PXE.
         #vboxc$i.gui = 'true'
         vboxc$i.customize [
@@ -48,7 +48,7 @@ EOF`
           "--medium", "${PXEBOOT_ISO}"
         ]
       end
-      c$i.vm.boot_timeout = 10
+      c$i.vm.boot_timeout = 1
     end
 EOF`
     VAGRANT_DEFS+=$'\n'
