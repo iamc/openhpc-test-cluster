@@ -55,7 +55,9 @@ EOF`
 done
 
 cp recipe.sh.tmpl cluster/recipe.sh
-sed "s/<NCOMPUTES>/$NCOMPUTES/g;" input.local.tmpl > cluster/input.local
+cp input.local.tmpl cluster/input.local
+sed -i "s/<NCOMPUTES>/$NCOMPUTES/g;" cluster/input.local
+sed "s/enable_clustershell:-0/enable_clustershell:-1/" cluster/input.local
 echo "$COMPUTE_DEFS" >> cluster/input.local
 cp Vagrantfile.header.tmpl cluster/Vagrantfile
 echo "$VAGRANT_DEFS" >> cluster/Vagrantfile
