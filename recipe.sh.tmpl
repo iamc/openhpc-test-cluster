@@ -417,21 +417,21 @@ done
 # ---------------------------------------
 # Install Development Tools (Section 4.1)
 # ---------------------------------------
-yum -y install ohpc-autotools
-yum -y install EasyBuild-ohpc
-yum -y install hwloc-ohpc
-yum -y install spack-ohpc
-yum -y install valgrind-ohpc
+# yum -y install ohpc-autotools
+# yum -y install EasyBuild-ohpc
+# yum -y install hwloc-ohpc
+# yum -y install spack-ohpc
+# yum -y install valgrind-ohpc
 
 # -------------------------------
 # Install Compilers (Section 4.2)
 # -------------------------------
-yum -y install gnu8-compilers-ohpc
+# yum -y install gnu8-compilers-ohpc
 
 # ----------------------
 # Install llvm Compilers
 # ----------------------
-yum -y install llvm5-compilers-ohpc
+# yum -y install llvm5-compilers-ohpc
 
 # --------------------------------
 # Install MPI Stacks (Section 4.3)
@@ -452,7 +452,7 @@ fi
 # ---------------------------------------
 # Install Performance Tools (Section 4.4)
 # ---------------------------------------
-yum -y install ohpc-gnu8-perf-tools
+# yum -y install ohpc-gnu8-perf-tools
 
 if [[ ${enable_geopm} -eq 1 ]];then
      yum -y install ohpc-gnu8-geopm
@@ -462,10 +462,10 @@ fi
 # ---------------------------------------------------
 # Install 3rd Party Libraries and Tools (Section 4.6)
 # ---------------------------------------------------
-yum -y install ohpc-gnu8-serial-libs
-yum -y install ohpc-gnu8-io-libs
-yum -y install ohpc-gnu8-python-libs
-yum -y install ohpc-gnu8-runtimes
+# yum -y install ohpc-gnu8-serial-libs
+# yum -y install ohpc-gnu8-io-libs
+# yum -y install ohpc-gnu8-python-libs
+# yum -y install ohpc-gnu8-runtimes
 if [[ ${enable_mpi_defaults} -eq 1 ]];then
      yum -y install ohpc-gnu8-mpich-parallel-libs
      yum -y install ohpc-gnu8-openmpi3-parallel-libs
