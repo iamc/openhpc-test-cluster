@@ -24,7 +24,7 @@ EOF`
     VAGRANT_DEFS+=`cat <<EOF
     config.vm.define "c$i", autostart: false do |c$i|
       c$i.vm.provider "virtualbox" do |vboxc$i|
-        vboxc$i.memory = 1024
+        vboxc$i.memory = 2048
         vboxc$i.cpus = 2
         # Enable if you need to debug PXE.
         #vboxc$i.gui = 'true'
